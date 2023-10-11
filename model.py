@@ -57,13 +57,13 @@ end_date = current_date.strftime('%Y-%m-%d')
 
 def get_preprocessed_df():
 	
-	df_btc = pd.read_csv(construct_download_url('BTC-USD', '2017-11-09', end_date, 'daily'))
+	df_btc = pd.read_csv(construct_download_url('BTC-USD', '2018-11-09', end_date, 'daily'))
 	# df_btc.set_index('Date', inplace=True)
 
-	df_eth = pd.read_csv(construct_download_url('ETH-USD', '2017-11-09', end_date, 'daily'))
+	df_eth = pd.read_csv(construct_download_url('ETH-USD', '2018-11-09', end_date, 'daily'))
 	# df_eth.set_index('Date', inplace=True)
 
-	df_ltc = pd.read_csv(construct_download_url('LTC-USD', '2017-11-09', end_date, 'daily'))
+	df_ltc = pd.read_csv(construct_download_url('LTC-USD', '2018-11-09', end_date, 'daily'))
 	# df_ltc.set_index('Date', inplace=True)
 
 	df_date = df_btc[['Date']]
