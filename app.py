@@ -16,8 +16,8 @@ st.set_page_config(page_title="Amazon Product App")
 api_key = os.getenv('API_KEY')
 api_secret = os.getenv('API_SECRET')
 
-api_key = os.environ.get('API_KEY')
-api_secret = os.environ.get('API_SECRET')
+api_key = os.environ.get(api_key)
+api_secret = os.environ.get(api_secret)
 
 # Sidebar contents
 with st.sidebar:
@@ -28,7 +28,7 @@ with st.sidebar:
     ''')
 
     add_vertical_space(6)
-    st.write('Made by [Md Endan Mollick](https://github.com/MDENDAN)')
+    st.write('Made by [MD Endan Mollick](https://github.com/MDENDAN)')
 
 st.header("Cryptocurreny Price Prediction 📈")
 st.divider()
@@ -44,8 +44,7 @@ def main():
         st.info("Predicted Price (USD):")
         # answer = get_price_prediction_model('2023-08-16')
         answer = get_price_prediction_model(date)
-        if answer:
-            st.write(answer)
+        st.write(answer)
 
         if answer:
             # Bot crypto trading

@@ -5,15 +5,9 @@ import json
 import pandas as pd
 import numpy as np
 from statsmodels.tsa.statespace.sarimax import SARIMAX
-from ratelimit import limits,sleep_and_retry
-
-# FIFTEEN_MINUTES = 900
 
 
 # Define a function to construct the download URL for cryptocurrency data
-# @rate_limited(5, 1)
-@sleep_and_retry
-@limits(calls=15, period=10)
 def construct_download_url(
 	ticker,
 	period1,
@@ -63,13 +57,13 @@ end_date = current_date.strftime('%Y-%m-%d')
 
 def get_preprocessed_df():
 	
-	df_btc = pd.read_csv(construct_download_url('BTC-USD', '2018-11-09', end_date, 'daily'))
+	df_btc = pd.read_csv(construct_download_url('BTC-USD', '2017-11-09', end_date, 'daily'))
 	# df_btc.set_index('Date', inplace=True)
 
-	df_eth = pd.read_csv(construct_download_url('ETH-USD', '2018-11-09', end_date, 'daily'))
+	df_eth = pd.read_csv(construct_download_url('ETH-USD', '2017-11-09', end_date, 'daily'))
 	# df_eth.set_index('Date', inplace=True)
 
-	df_ltc = pd.read_csv(construct_download_url('LTC-USD', '2018-11-09', end_date, 'daily'))
+	df_ltc = pd.read_csv(construct_download_url('LTC-USD', '2017-11-09', end_date, 'daily'))
 	# df_ltc.set_index('Date', inplace=True)
 
 	df_date = df_btc[['Date']]
