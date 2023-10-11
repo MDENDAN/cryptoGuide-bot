@@ -44,7 +44,8 @@ def main():
         st.info("Predicted Price (USD):")
         # answer = get_price_prediction_model('2023-08-16')
         answer = get_price_prediction_model(date)
-        st.write(answer)
+        if answer:
+            st.write(answer)
 
         if answer:
             # Bot crypto trading
