@@ -5,9 +5,10 @@ import json
 import pandas as pd
 import numpy as np
 from statsmodels.tsa.statespace.sarimax import SARIMAX
-
+from ratelimit import rate_limited
 
 # Define a function to construct the download URL for cryptocurrency data
+@rate_limited(5, 1)
 def construct_download_url(
 	ticker,
 	period1,
