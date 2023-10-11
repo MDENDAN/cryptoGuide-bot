@@ -16,7 +16,7 @@ st.set_page_config(page_title="Amazon Product App")
 api_key = os.getenv('API_KEY')
 api_secret = os.getenv('API_SECRET')
 
-api_key = os.environ.get(api_key)
+api_key = os.environ.get('API_KEY')
 api_secret = os.environ.get(api_secret)
 
 # Sidebar contents
