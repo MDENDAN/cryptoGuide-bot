@@ -17,7 +17,7 @@ api_key = os.getenv('API_KEY')
 api_secret = os.getenv('API_SECRET')
 
 api_key = os.environ.get('API_KEY')
-api_secret = os.environ.get(api_secret)
+api_secret = os.environ.get('API_SECRET')
 
 # Sidebar contents
 with st.sidebar:
