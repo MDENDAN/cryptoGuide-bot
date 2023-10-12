@@ -1,6 +1,6 @@
 import streamlit as st
 
-from streamlit_extras.add_vertical_space import add_vertical_space
+# from streamlit_extras.add_vertical_space import add_vertical_space
 from dotenv import load_dotenv
 import os
 
@@ -27,7 +27,6 @@ with st.sidebar:
     This web-app is an cryptocurrreny price prediction and trading bot based on binance API.
     ''')
 
-    add_vertical_space(6)
     st.write('Made by [MD Endan Mollick](https://github.com/MDENDAN)')
 
 st.header("Cryptocurreny Price Prediction 📈")
