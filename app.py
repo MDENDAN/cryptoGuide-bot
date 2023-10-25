@@ -13,8 +13,8 @@ load_dotenv()
 st.set_page_config(page_title="Amazon Product App")
 
 # Access environment variables
-api_key = st.secrets("API_KEY")
-api_secret = st.secrets("API_SECRET")
+api_key = os.getenv('API_KEY')
+api_secret = os.getenv('API_SECRET')
 
 api_key = os.environ.get(api_key)
 api_secret = os.environ.get(api_secret)
